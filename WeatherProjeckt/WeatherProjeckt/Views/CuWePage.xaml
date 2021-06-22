@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherProjeckt.Views.CuWePage"
+             Title="Текущая погода">
+    <ContentPage.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <Button BackgroundColor="White" FontSize="Large" FontAttributes="Bold" Text="{Binding name}" TextColor="Black" HorizontalOptions="Center" x:Name="Lable1" Grid.Row="3" Grid.ColumnSpan="3"/>
+            <BoxView Grid.Row="0" Grid.Column="0"  />
+
+            <Label Grid.Row="0" Grid.Column="0" FontSize="Medium"  Text="Сейчас:" TextColor="Black" HorizontalOptions="Center"/>
+
+            <BoxView  Grid.Row="0" Grid.Column="1"
+                  />
+            <Label Grid.Column="1" Grid.Row="0"  FontSize="Large" Text="{Binding temp}" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"/>
+
+            <BoxView Grid.Row="0" Grid.Column="2"
+                  />
+            <Label FontSize="Small"  Text="℃" TextColor="Black" HorizontalOptions="Center" Grid.Row="0" Grid.Column="2"/>
+
+
+
+            <BoxView Grid.Row="1" Grid.Column="0"  />
+            <Label FontSize="Medium"  Text="Ощущается как" TextColor="Black" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+
+            <BoxView  Grid.Row="1" Grid.Column="1"
+                  />
+            <Label  FontSize="Large" Text="{Binding feels_like}" TextColor="Black" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" FontAttributes="Bold"/>
+
+            <BoxView Grid.Row="1" Grid.Column="2"
+                  />
+            <Label FontSize="Small"  Text="℃" TextColor="Black" HorizontalOptions="Center" Grid.Row="1" Grid.Column="2"/>
+
+
+
+            <BoxView Grid.Row="2" Grid.Column="0"  />
+            <Label FontSize="Medium"  Text="Давление" TextColor="Black" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+
+            <BoxView  Grid.Row="2" Grid.Column="1"
+                  />
+            <Label  FontSize="Large" Text="{Binding pressure}" TextColor="Black" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" />
+
+            <BoxView Grid.Row="2" Grid.Column="2"
+                  />
+            <Label FontSize="Small"  Text="Паскаль" TextColor="Black" HorizontalOptions="Center" Grid.Row="2" Grid.Column="2"/>
+
+
+
+            <BoxView Grid.Row="3" Grid.Column="0"  />
+            <Label FontSize="Medium"  Text="Влажность" TextColor="Black" HorizontalOptions="Center" Grid.Row="3" Grid.Column="0"/>
+
+            <BoxView  Grid.Row="3" Grid.Column="1"
+                  />
+            <Label  FontSize="Large" Text="{Binding humidity}" TextColor="Black" HorizontalOptions="Center" Grid.Row="3" Grid.Column="1" FontAttributes="Bold"/>
+
+            <BoxView Grid.Row="3" Grid.Column="2"
+                  />
+            <Label FontSize="Small"  Text="%" TextColor="Black" HorizontalOptions="Center" Grid.Row="3" Grid.Column="2"/>
+
+            <Button Text="Узнать погоду" Command="{Binding LoadDataCommand}"   HorizontalOptions="FillAndExpand" VerticalOptions="End" x:Name="Butt1" Grid.Row="3" Grid.ColumnSpan="3" FontAttributes="Bold"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
